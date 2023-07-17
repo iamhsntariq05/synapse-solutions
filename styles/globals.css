@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+    overflow-x: hidden
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+    
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.typewriter-holder {
+  left: 300px;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+.professions {
+  position: absolute;
+  left: 0;
+
+  font-weight: bold;
+  font-size: 95px;
+}
+
+
+.wave-layer {
+
+
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+
+
+  overflow-x: hidden;
+
+  background-image: url('/wave.svg');
+
+
+
+}
+
+
+.wave-layers2 {
+
+
+  aspect-ratio: 960/300;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: url('/waves2.svg');
+  border: 2px solid red; /* Set the border width and color */
+  box-sizing: border-box;
+
+
+
+
+  
+
+
+
+
+
+}
+
+.middle {
+
+  overflow-x: hidden;
+  
+  width:100%;
+  display: flex;
+
+  margin-left: 20%;
+  margin-top: 20%;
+  
+  
+}
+
+
+
+#tsparticles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wave-layers3{
+
+
+ 
+  aspect-ratio: 960/300;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: url('/waves3.svg');
+   /* Set the border width and color */
+  box-sizing: border-box;
+
+
+
+}
+.wave-layers4{
+
+
+ 
+  aspect-ratio: 960/300;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: url('/waves4.svg');
+   /* Set the border width and color */
+  box-sizing: border-box;
+  position: relative;
+
+
+}
+
+
+
+
+.contact-container {
+
+  width: 100%; /* Adjust as needed */
+  height: 300px;
+
+
+}
+.contact-waves{
+
+
+ 
+  
+  aspect-ratio: 900/450;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
+
+  background-image: url('/contact-waves1.svg');
+  
+
+
+
+}
+
+.animate-slow {
+  transition-duration: 10s; /* Adjust this value to control the speed of the animation */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slow-animation-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s, transform 2s;
+}
+
+
+.wave-layers5{
+
+
+ 
+  aspect-ratio: 900/450;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: url('/waves5.svg');
+   /* Set the border width and color */
+  box-sizing: border-box;
+
+
+
+}
+

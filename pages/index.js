@@ -1,36 +1,22 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+
 import Typewriter from 'typewriter-effect';
 import { useState } from 'react';
-import { BsFillLightbulbFill } from "react-icons/bs";
-import IconBulb from '../component/IconBulb';
 
-import  {HiWrench } from 'react-icons/hi2';
-import { BsFillPencilFill } from 'react-icons/bs';
-import { AiFillBulb } from 'react-icons/ai';
-import { BsThreeDots } from 'react-icons/bs';
 
 
 import Card from '../component/Card';
 
 
-import { useEffect, useRef } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { scrollama } from 'scrollama';
-import { gsap } from 'gsap';
+
 
 import Tech from '../component/tech_stacks';
 import { GiGearHammer } from 'react-icons/gi';
 
 
-import ParticlesEffect from '../component/ParticleEffect';
-
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import Contact from '../component/contact';
-import NextBackButton from '../component/NextBackButton';
+
 import Navbar from '../component/Navbar';
 import Footer from '../component/Footer';
 

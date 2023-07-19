@@ -8,17 +8,18 @@ import { AiOutlineMail } from "react-icons/ai";
 
 import { useRouter } from 'next/router';
 
+import { useRef } from 'react';
+import Link from 'next/link';
+
 
  
 
 
 function Footer() {
 
-  const scrollToSection = (e) => {
   
-    const targetSection = document.getElementsByClassName('wave-layers4');
-    targetSection.scrollIntoView({ behavior: "smooth" });
-  };
+
+  
 
     const router = useRouter();
 
@@ -34,6 +35,21 @@ function Footer() {
       router.push("mailto:info@synapsesolutions.co");
     };
 
+
+    const waveLayer4Ref = useRef(null);
+  
+  // Function to handle the scroll to the target element
+  const handleScrollToWaveLayer4 = () => {
+    const waveLayer4Element = document.querySelector('.wave-layers4');
+    waveLayer4Element.scrollIntoView({ behavior: 'smooth' });
+
+  };
+
+  const handleScrollToWaveLayer2 = () => {
+    const waveLayer4Element = document.querySelector('.wave-layers2');
+    waveLayer4Element.scrollIntoView({ behavior: 'smooth' });
+
+  };
 
 return (
 
@@ -83,6 +99,7 @@ return (
 </div>
 
       </div>
+      
       <div className="w-full lg:w-6/12 px-4 text-[#EEEEEE]">
         <div className="flex flex-wrap items-top mb-6">
           <div className="w-full lg:w-4/12 px-4 ml-auto">
@@ -90,49 +107,52 @@ return (
               Our Services
             </span>
             <ul className="list-unstyled">
-              <li>
-                <a
-                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                  onClick={scrollToSection}
-                >
-                  Web & App Development
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                  href="https://blog.creative-tim.com?ref=njs-profile"
-                >
-                  IT Consultancy
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                  href="https://www.github.com/creativetimofficial?ref=njs-profile"
-                >
-                  CRM Integration
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                  href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile"
-                >
-                  Digital Transformation
-                </a>
-              </li>
-            </ul>
+  <li>
+    <a
+      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm cursor-pointer"
+      onClick={handleScrollToWaveLayer4}
+    >
+      Web & App Development
+    </a>
+  </li>
+  <li>
+    <a
+      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm cursor-pointer"
+      onClick={handleScrollToWaveLayer4}
+    >
+      IT Consultancy
+    </a>
+  </li>
+  <li>
+    <a
+      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm cursor-pointer"
+      onClick={handleScrollToWaveLayer4}
+    >
+      CRM Integration
+    </a>
+  </li>
+  <li>
+    <a
+      className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm cursor-pointer"
+      onClick={handleScrollToWaveLayer4}
+    >
+      Digital Transformation
+    </a>
+  </li>
+</ul>
+
           </div>
+
+
           <div className="w-full lg:w-4/12 px-4">
             <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
-              Links
+              Useful Links
             </span>
             <ul className="list-unstyled">
               <li>
                 <a
                   className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                  href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
+                  href="/"
                 >
                   Home
                 </a>
@@ -140,31 +160,59 @@ return (
               <li>
                 <a
                   className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                  href="https://creative-tim.com/terms?ref=njs-profile"
-                >
+                  href="/contact"
+                  >
                   Contact Us
                 </a>
               </li>
               <li>
                 <a
-                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                  href="https://creative-tim.com/privacy?ref=njs-profile"
+                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm cursor-pointer"
+                  onClick={handleScrollToWaveLayer2}
                 >
                   Projects
                 </a>
               </li>
               <li>
                 <a
-                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                  href="https://creative-tim.com/contact-us?ref=njs-profile"
+                  className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm cursor-pointer"
+                  onClick={handleScrollToWaveLayer2}
                 >
                   Services
                 </a>
               </li>
             </ul>
           </div>
+
+
+
+
+
+
+
+
+
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
     <hr className="my-6 border-blueGray-300" />
     <div className="flex flex-wrap items-center md:justify-between justify-center">

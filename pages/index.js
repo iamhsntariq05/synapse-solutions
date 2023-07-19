@@ -2,7 +2,6 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Typewriter from 'typewriter-effect';
-import ParticlesBackground from '../config/ParticlesBackground';
 import { useState } from 'react';
 import { BsFillLightbulbFill } from "react-icons/bs";
 import IconBulb from '../component/IconBulb';
@@ -25,7 +24,7 @@ import Tech from '../component/tech_stacks';
 import { GiGearHammer } from 'react-icons/gi';
 
 
-
+import ParticlesEffect from '../component/ParticleEffect';
 
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -46,7 +45,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const professions = ["Software Dev.", "IT Consultancy", "Web Dev.", "App Dev.", "CRM Integration", "Digital Transformation"];
+const professions = ["Software Development.", "IT Consultancy.", "Web Development.", "App Development.", "CRM Integration.", "Digital Transformation."];
 
 
 
@@ -122,13 +121,22 @@ export default function Example() {
       <Navbar />
       </div>
     
-     <div className="wave-layer">
-        <div className="typewriter-holder">
-          <div className="professions mt-10">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100"> We offer </span> <span className="text-fuchsia-500"> <Typewriter options={{ strings: professions, autoStart: true, loop: true }} /></span>
-          </div>
-        </div>
-      </div>
+      
+      <div className="wave-layer relative">
+
+  <div className="typewriter-holder">
+    <div className="professions mt-10">
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">
+        We offer
+      </span>{" "}
+      <span className="text-fuchsia-500">
+        <Typewriter options={{ strings: professions, autoStart: true, loop: true }} />
+      </span>
+    </div>
+  </div>
+</div>
+
+      
       
       <div className="relative">
 
@@ -138,9 +146,11 @@ export default function Example() {
           <div className="text-6xl font-normal font-helvetica leading-normal mt-0 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#ff00cc] to-[#333399]">coming soon | <Countdown date={'2023-07-23T00:00:00'} /></div>
         </div>
 
-        <div className="absolute bottom-0 right-0 transform rotate-x-180 transition-transform duration-900">
-        <GiGearHammer className="text-white text-[10rem] text-opacity-50 hover:text-opacity-100 hover:scale-110 hover:text-[#410B59]" />
+        <div className="relative">
+  <div className="absolute bottom-0 right-0 transform rotate-x-180 translate-y-1/2 -translate-x-1/2 -rotate-45">
+    <GiGearHammer className="text-white text-[10rem] text-opacity-50 hover:text-opacity-100 hover:scale-110 hover:text-[#410B59]" />
   </div>
+</div>
 
 
       </div>

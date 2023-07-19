@@ -10,14 +10,15 @@ function Navbar() {
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-[#2C0647] p-6">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
+      <div className="flex-shrink-0">
         <Image
           src="/Synapse Solutions Logo.png"
           alt="Synapse Solutions"
-          width="150"
-          height="10"
+          width="200"
+          height="1"
         />
       </div>
+    
   
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div className="text-sm lg:flex-grow lg:text-right">

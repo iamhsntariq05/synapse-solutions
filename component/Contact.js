@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import NextBackButton from './NextBackButton';
 
 const Contact = ({ prompt, placeholder, onNext, onBack }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = (e) => {
-
     e.preventDefault();
-    onNext(); // Pass the name and email values as an object to onNext function
+    onNext(inputValue);
   };
 
   return (
@@ -20,24 +18,12 @@ const Contact = ({ prompt, placeholder, onNext, onBack }) => {
             type="text"
             placeholder={placeholder}
             className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-7 leading-tight focus:outline-none"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
             required
           />
         </div>
-        {placeholder === 'enter your email' && (
-          <div className="flex items-center border-b border-teal-500 py-2">
-            <input
-              type="email"
-              placeholder="enter your email"
-              className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-7 leading-tight focus:outline-none"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-        )}
-        <NextBackButton onBack={onBack} onNext={onNext}/>
+        <NextBackButton onBack={onBack} onNext={handleSubmit} />
       </form>
     </>
   );

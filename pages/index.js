@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 import Card from '../component/Card';
 
-
+import ParticleEffect from '../component/ParticleEffect';
 
 
 import Tech from '../component/tech_stacks';
@@ -104,11 +104,14 @@ export default function Example() {
       </Head>
 
    <div >
+   
       <Navbar />
       </div>
     
-      
-      <div className="wave-layer relative">
+     
+      <div className="wave-layer" >
+
+      <ParticleEffect id="tsparticles"/>
 
   <div className="typewriter-holder">
     <div className="professions mt-10">
@@ -121,9 +124,6 @@ export default function Example() {
     </div>
   </div>
 </div>
-
-      
-      
       <div className="relative">
 
       

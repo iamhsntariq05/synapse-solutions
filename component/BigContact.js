@@ -75,7 +75,7 @@ function BigContact() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          to: 'faizanofficial120@gmail.com',
+          to: 'info@synapsesolutions.co',
           subject: 'Contact Form Submission',
           text: emailBody,
         }),

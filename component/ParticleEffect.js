@@ -3,7 +3,7 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
  // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
-const App = () => {
+const App = ({id}) => {
     const particlesInit = useCallback(async engine => {
         console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -18,30 +18,24 @@ const App = () => {
     }, []);
 
     return (
-      
+        <div className="relative z-10">
         <Particles
 
     
-            id="tsparticles"
+            id={id}
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
               fullScreen: {
                 enable: false,
-                zIndex: -1,
+            
                 },
                 
                 fpsLimit: 120,
                 interactivity: {
                     events: {
-                        onClick: {
-                            enable: true,
-                            mode: "push",
-                        },
-                        onHover: {
-                            enable: true,
-                            mode: "repulse",
-                        },
+
+                        
                         resize: true,
                     },
                     modes: {
@@ -72,7 +66,7 @@ const App = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 3,
                         straight: false,
                     },
                     number: {
@@ -95,6 +89,7 @@ const App = () => {
                 detectRetina: true,
             }}
         />
+        </div>
         
     );
 };

@@ -50,7 +50,7 @@ const App = ({id}) => {
                 },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: "#650AD8",
                     },
                     links: {
                         color: "#ffffff",
@@ -83,7 +83,7 @@ const App = ({id}) => {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 5, max: 10 },
                     },
                 },
                 detectRetina: true,

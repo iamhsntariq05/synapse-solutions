@@ -2,7 +2,7 @@
 import Typewriter from 'typewriter-effect';
 import { useState } from 'react';
 
-
+import Desktop1 from '../component/aboutUs';
 
 import Card from '../component/Card';
 
@@ -124,6 +124,9 @@ export default function Example() {
     </div>
   </div>
 </div>
+
+    
+
       <div className="relative">
 
       

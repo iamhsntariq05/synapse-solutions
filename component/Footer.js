@@ -26,13 +26,13 @@ function Footer() {
     const handleClick = (e) => {
       // Navigates to the desired URL when the button is clicked
       if (e === "linkedin")
-      router.push('https://www.linkedin.com/company/synapse-solutions-co');
+      window.open('https://www.linkedin.com/company/synapse-solutions-co/', '_blank');
       if (e === "insta")
-      router.push('https://www.instagram.com/synapse.solutions.co/');
+      window.open('https://www.instagram.com/synapse.solutions.co/', '_blank');
       if(e=== "facebook")
-      router.push("https://www.facebook.com/synapse.solutions.co");
+      window.open('https://www.facebook.com/synapse.solutions.co', '_blank');
       if(e === "mail")
-      router.push("mailto:info@synapsesolutions.co");
+      window.open('mailto:info@synapsesolutions.co', '_blank');
     };
 
 
@@ -71,28 +71,28 @@ return (
     type="button"
     onClick={() => handleClick("mail")}
   >
-    <AiOutlineMail/>
+    <AiOutlineMail style={{ color: 'black' }}/>
   </button>
   <button
     className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
     type="button"
     onClick={() => handleClick("facebook")}
   >
-   <FaFacebookF />
+   <FaFacebookF style={{ color: 'black' }}/>
   </button>
   <button
     className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
     type="button"
     onClick={()=> handleClick("insta")}
   >
-    <BsInstagram />
+    <BsInstagram style={{ color: 'black' }}/>
   </button>
   <button
     className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
     type="button"
     onClick={() => handleClick("linkedin")}
   >
-    <FaLinkedinIn />
+    <FaLinkedinIn style={{ color: 'black' }}/>
   </button>
 
   

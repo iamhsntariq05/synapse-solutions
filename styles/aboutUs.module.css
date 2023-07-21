@@ -1,5 +1,5 @@
 /* styles.module.css */
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+ @import url('https://fonts.googleapis.com/css?family=Poppins'); 
 
 .container {
     width: 100%;
@@ -28,6 +28,33 @@
     /* position: absolute; */
   }
   .rectangle1 {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.desktop1 {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  /* background-color: rgb(177, 7, 7); */
+}
+.back1 {
+  top: 20px;
+  left: 0px;
+  width: 100%;
+  height:auto;
+  margin-left: auto;
+  /* position: absolute; */
+}
+   .rectangle1 {
     top: 398px;
     left: 92px;
     width: 275px;
@@ -215,4 +242,44 @@
     font-stretch: normal;
     text-decoration: none;
   }
-  
+   
+
+  /* Updated styles for mobile and tablets */
+@media (max-width: 767px) {
+  .desktop1 {
+    height: auto;
+  }
+  .rectangle1,
+  .rectangle2,
+  .rectangle3,
+  .rectangle4 {
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 28px;
+  }
+  .text,
+  .text02,
+  .text04,
+  .text06,
+  .text08,
+  .text10,
+  .text12,
+  .text14,
+  .text16,
+  .text18 {
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+

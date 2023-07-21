@@ -18,18 +18,18 @@ function Tech() {
     FaNode,
     FaDatabase,
     FaServer,
-    FaAws,
+    
 
   ];
 
   const icons2 = [
-    SiAngularjs,  SiPhp, SiMongodb, DiGit, DiGithubBadge, SiTailwindcss, BsBootstrapFill, SiIbmcloud, FaDocker
+    FaAws, SiAngularjs,  SiPhp, SiMongodb, DiGit, DiGithubBadge, SiTailwindcss, BsBootstrapFill
 
 
   ];
 
   const icons3 = [
-    FaSass, BsAndroid2, BsApple, DiSwift, FaStripe, FaShopify
+    SiIbmcloud, FaDocker, FaSass, BsAndroid2, BsApple, DiSwift, FaStripe, FaShopify
 
   ]
 
@@ -46,26 +46,37 @@ function Tech() {
 
   return (
     <>
-    <div className="flex items-center justify-center space-x-[2rem] mt-[55px]">
+    
+    <div className="flex flex-wrap grid grid-cols-4 gap-4 mt-5
+    grid-cols-4 mt-[50px] space-x-2
+    md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-[55px]">
       {icons.map((Icon, index) => (
         <IconBulb key={index} icon={Icon} />
-      ))}
-      </div>
+          ))}
+    </div>
 
-<div className="flex items-center justify-center space-x-[2rem] mt-10">
-      {icons2.map((Icon, index) => (
-        <IconBulb key={index} icon={Icon} />
-      ))}
+
+      <div className="
+        flex flex-wrap grid grid-cols-4 gap-4 mt-5
+        grid-cols-4 mt-[50px] space-x-2
+      md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-10">
+            {icons2.map((Icon, index) => (
+              <IconBulb key={index} icon={Icon} />
+            ))}  
 
       
-    </div>
-    <div className="flex items-center justify-center space-x-[2rem] mt-10">
+      </div> 
+    <div className="
+     flex flex-wrap grid grid-cols-4 gap-4 
+     grid-cols-4 mt-[50px] space-x-2
+     md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-10">
       {icons3.map((Icon, index) => (
         <IconBulb key={index} icon={Icon} />
-      ))}
+      ))} 
 
       
-    </div>
+      </div>  
+    
 
 
     <div className="ml-5 mt-[3rem] flex justify-center">

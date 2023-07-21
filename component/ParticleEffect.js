@@ -50,7 +50,7 @@ const App = ({id}) => {
                 },
                 particles: {
                     color: {
-                        value: "#650AD8",
+                        value: "#BA2E66",
                     },
                     links: {
                         color: "#ffffff",

@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import '../styles/styles.css';
 
+import '../styles/fonts.css';
+
 
 
 function MyApp({ Component, pageProps }) {

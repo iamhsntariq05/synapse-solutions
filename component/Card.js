@@ -13,28 +13,29 @@ function Card({ service, text, img }) {
 
   return (
     <div
-      className={`max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 ml-6 p-5 ${
+      className={`max-w-xs sm:max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-3 ${
         isHovered ? "bg-opacity-50" : ""
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <img
-        className="rounded-t-lg"
+        className="rounded-t-lg w-full h-36 sm:h-40 object-cover"
         src={img}
         alt=""
-        width="100"
-        height="100"
       />
 
-      <div>
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
+      <div className="p-3">
+        <h5 className="mb-2 text-lg sm:text-xl font-bold tracking-tight text-white">
           {service}
         </h5>
-        <p className="mb-3 font-normal text-gray-400">{text}</p>
+        <p className="mb-3 text-sm sm:text-base font-normal text-gray-400">
+          {text}
+        </p>
       </div>
     </div>
   );
 }
+
 
 export default Card;

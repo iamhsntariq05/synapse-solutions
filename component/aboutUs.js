@@ -2,12 +2,12 @@ import React from 'react'
 
 import styles from '../styles/aboutUs.module.css'
 
-const Desktop1 = (props) => {
+const aboutUs = (props) => {
   return (
     <div className={styles['container']}>
       <div className={styles['desktop1']}>
         <img
-          src="/back 1.png"
+          src="/background 1.jpg"
           alt="back11021"
           className={styles['back1']}
         />
@@ -32,7 +32,7 @@ const Desktop1 = (props) => {
           className={styles['rectangle4']}
         />
         <span className={styles['text']}>
-          <span>WHy Choose us?</span>
+          <span>Why Choose us?</span>
         </span>
         <span className={styles['text02']}>
           <span>
@@ -84,4 +84,4 @@ const Desktop1 = (props) => {
   )
 }
 
-export default Desktop1
+export default aboutUs

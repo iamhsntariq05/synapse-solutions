@@ -71,7 +71,7 @@ function Tech() {
     <div className="ml-5 mt-[3rem] flex justify-center">
         <button
           type="button"
-          className="bg-transparent hover:bg-[#550a4f] text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent mr-[6rem] rounded-full transform transition-all duration-300"
+          className="hover:bg-transparent bg-[#550a4f] hover:text-blue-700 font-semibold text-white py-2 px-4 border hover:border-blue-500 border-transparent mr-[6rem] rounded-full transform transition-all duration-300"
           onClick={handle_click}
           style={{ width: '200px' }}
         >

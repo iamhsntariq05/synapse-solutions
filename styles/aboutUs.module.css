@@ -17,7 +17,7 @@
     position: relative;
     align-items: flex-start;
     flex-shrink: 0;
-    background-color: rgb(177, 7, 7);
+    fill: transparent;
   }
   .back1 {
     top: 20px;

@@ -65,7 +65,7 @@ return (
         <h5 className="text-lg mt-5 mb-2 text-[#EEEEEE]">
           All your IT solutions at one place.
         </h5>
-        <div className="mt-8 lg:mb-0 mb-6 flex items-center justify-start">
+        <div className="mt-8 lg:mb-0 mb-6 flex justify-center lg:justify-start">
   <button
     className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
     type="button"
@@ -88,7 +88,9 @@ return (
     <BsInstagram style={{ color: 'black' }}/>
   </button>
   <button
-    className="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 flex items-center justify-center rounded-full outline-none focus:outline-none mr-2"
+    className="bg-white text-blueGray-800
+     shadow-lg font-normal h-10 w-10 flex items-center justify-center 
+     rounded-full outline-none focus:outline-none "
     type="button"
     onClick={() => handleClick("linkedin")}
   >
@@ -144,8 +146,8 @@ return (
           </div>
 
 
-          <div className="w-full lg:w-4/12 px-4">
-            <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
+          <div className="w-full lg:w-4/12 px-4 md:w-2/3 ">
+            <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 mt-4 sm:mt-0">
               Useful Links
             </span>
             <ul className="list-unstyled">

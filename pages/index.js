@@ -113,18 +113,20 @@ export default function Example() {
 
       <ParticleEffect id="tsparticles"/>
 
-  <div className="typewriter-holder">
+  <div className="typewriter-holder overflow-hidden">
     <div className="professions mt-10">
-      <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 
+      via-red-200 to-yellow-100 ">
         We offer
       </span>{" "}
-      <span className="text-fuchsia-500">
+      <span className="text-fuchsia-500 ">
         <Typewriter options={{ strings: professions, autoStart: true, loop: true }} />
       </span>
     </div>
   </div>
 </div>
 
+{/* <Desktop1/> */}
     
 
       <div className="relative">
@@ -226,28 +228,21 @@ export default function Example() {
 
       <div className="wave-layers5">
       <div class="flex justify-center items-center">
-  <span class="bg-clip-text text-3xl mt-[9rem] justify-center text-transparent bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 tracking-widest">Tech Stacks We Leverage</span>
+  <span class="bg-clip-text text-3xl mt-[7rem] h-[50px]  ml-6 justify-center 
+   text-transparent bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100 tracking-widest
+   sm: h-[80px] lg:h-[50px]
+   "
+   style= {{ fontSize: '40px'}}
+   >
+    Tech Stacks We Leverage</span>
 
   </div>  
 
-  
 
-  <Tech />
- 
-  
- 
-
- 
+  <Tech /> 
 
       </div>
 
-
-      
-      
-      
-      
-      
-      
 
 <Footer />
 

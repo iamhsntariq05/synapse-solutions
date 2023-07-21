@@ -18,18 +18,18 @@ function Tech() {
     FaNode,
     FaDatabase,
     FaServer,
-    FaAws,
+    
 
   ];
 
   const icons2 = [
-    SiAngularjs,  SiPhp, SiMongodb, DiGit, DiGithubBadge, SiTailwindcss, BsBootstrapFill, SiIbmcloud, FaDocker
+    FaAws, SiAngularjs,  SiPhp, SiMongodb, DiGit, DiGithubBadge, SiTailwindcss, BsBootstrapFill
 
 
   ];
 
   const icons3 = [
-    FaSass, BsAndroid2, BsApple, DiSwift, FaStripe, FaShopify
+    SiIbmcloud, FaDocker, FaSass, BsAndroid2, BsApple, DiSwift, FaStripe, FaShopify
 
   ]
 
@@ -46,32 +46,45 @@ function Tech() {
 
   return (
     <>
-    <div className="flex items-center justify-center space-x-[2rem] mt-[55px]">
+    
+    <div className="flex flex-wrap grid grid-cols-4 gap-4 mt-5
+    grid-cols-4 mt-[50px] space-x-2
+    md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-[55px]">
       {icons.map((Icon, index) => (
         <IconBulb key={index} icon={Icon} />
-      ))}
-      </div>
+          ))}
+    </div>
 
-<div className="flex items-center justify-center space-x-[2rem] mt-10">
-      {icons2.map((Icon, index) => (
-        <IconBulb key={index} icon={Icon} />
-      ))}
+
+      <div className="
+        flex flex-wrap grid grid-cols-4 gap-4 mt-5
+        grid-cols-4 mt-[50px] space-x-2
+      md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-10">
+            {icons2.map((Icon, index) => (
+              <IconBulb key={index} icon={Icon} />
+            ))}  
 
       
-    </div>
-    <div className="flex items-center justify-center space-x-[2rem] mt-10">
+      </div> 
+    <div className="
+     flex flex-wrap grid grid-cols-4 gap-4 
+     grid-cols-4 mt-[50px] space-x-2
+     md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-10">
       {icons3.map((Icon, index) => (
         <IconBulb key={index} icon={Icon} />
-      ))}
+      ))} 
 
       
-    </div>
+      </div>  
+    
 
 
     <div className="ml-5 mt-[3rem] flex justify-center">
         <button
           type="button"
-          className="bg-transparent hover:bg-[#550a4f] text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent mr-[6rem] rounded-full transform transition-all duration-300"
+          className="bg-transparent hover:bg-[#550a4f] text-blue-700
+           font-semibold hover:text-white py-2 px-4 border
+            border-blue-500 hover:border-transparent mr-[1rem] rounded-full transform transition-all duration-300"
           onClick={handle_click}
           style={{ width: '200px' }}
         >

@@ -16,31 +16,40 @@ function BigContact() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [additionalText, setAdditionalText] = useState("");
   const [type, setType] = useState("");
+  const [currentStep, setCurrentStep] = useState(0);
 
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
-    console.log(selectedButton)
+    console.log(buttonName);
+  
     if (buttonName !== "Email") {
       setType(buttonName);
     }
   };
+  // const handleGoBack = () => {
+  //   setSelectedButton(null);
+  //   setName("");
+  //   setEmail("");
+  //   setAdditionalText("");
+  //   setShowSuccess(false);
+  // };
 
   const handleGoBack = () => {
-    setSelectedButton(null);
-    setName("");
-    setEmail("");
-    setAdditionalText("");
-    setShowSuccess(false);
+
+    setCurrentStep((prevStep) => prevStep - 1);
   };
 
   const handleSubmitName = (value) => {
     setName(value);
-    setSelectedButton("Email");
+    
+    //setSelectedButton("Email");
+    setCurrentStep(1); // Move to the next step (Email input)
   };
 
   const handleSubmitEmail = (value) => {
     setEmail(value);
-    setSelectedButton("AdditionalText");
+    //setSelectedButton("AdditionalText");
+    setCurrentStep(2); // Move to the next step (Email input)
   
   };
 
@@ -57,7 +66,8 @@ function BigContact() {
     try {
       sendEmail(formData);
       setShowSuccess(true);
-      setSelectedButton(null);
+      // setSelectedButton(null);
+      setCurrentStep(0); 
     } catch (error) {
       console.error("An error occurred:", error);
       alert("An error occurred. Please try again later.");
@@ -100,14 +110,22 @@ function BigContact() {
           </>
         ) : (
           <>
-            <h1 className="text-2xl font-normal font-helvetica leading-normal mt-0 mb-2 bg-clip-text text-[#ad3b76]">
-              Thanks for reaching out. How can we help you today?
+            <h1 className="text-2xl font-normal font-helvetica leading-normal mt-0 mb-2 bg-clip-text text-[#ad3b76] lg:ml-10 sm:ml-15"
+            style={{color:'white'}}>
+              
+               How can we help you today?
             </h1>
-            {selectedButton === null ? (
-              <div className="flex items-center space-x-[5rem] mt-8">
+            {selectedButton === null && currentStep ===0 ? (
+              <div className="flex items-center grid gap-6 grid-cols-2 mt-8 ml-4 sm:grid-cols-2 
+              sm:gap-x-6 sm:gap-y-6
+              sm:ml-2
+              sm-grid-rows-2 
+              lg:flex lg:items-center lg:space-x-20 lg:mt-8
+              md:flex md:items-center md:space-x-20 md:mt-8
+              ">
                 <IconBulb
                   icon={AiFillBulb}
-                  text="Development"
+                  text="Development"  
                   onClick={() => handleButtonClick("Development")}
                 />
                 <IconBulb
@@ -127,29 +145,35 @@ function BigContact() {
                 />
               </div>
             ) : (
-              <div className="text-lg">
-                {selectedButton !== "Email" && selectedButton !== "AdditionalText" && (
+              <div className="text-lg ml-10 mt-3 ">
+               {currentStep === 0 && (
+               
                   <Contact
                     prompt="Who do we have a pleasure talking with?"
                     placeholder="Enter your name/your company's name"
+                    
                     onNext={handleSubmitName}
                     onBack={handleGoBack}
                   />
                 )}
-                {selectedButton === "Email" && (
+                {currentStep === 1 && (
+              
                   <Contact
                     prompt="How shall we contact you?"
                     placeholder="Enter your email"
                     onNext={handleSubmitEmail}
                     onBack={handleGoBack}
+                    required
                   />
                 )}
-                {selectedButton === "AdditionalText" && (
+                {currentStep === 2 && (
+           
                   <Contact
                     prompt="Please provide additional details"
                     placeholder="Enter additional text"
                     onNext={handleSubmitAdditionalText}
                     onBack={handleGoBack}
+
                   />
                 )}
               </div>

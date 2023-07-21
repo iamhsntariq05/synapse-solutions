@@ -24,7 +24,7 @@ function Navbar() {
         <div className="text-sm lg:flex-grow lg:text-right">
           <a
             href="/"
-            className={`block mt-4 mr-10 lg:inline-block lg:mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4  hover:border-[#6a125b] ${
+            className={`block mt-4 mr-10 inline-block mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4  hover:border-[#6a125b] ${
               router.pathname === '/' ? 'border-b-4 border-[#6a125b]' : ''
             }`}
           >
@@ -32,7 +32,7 @@ function Navbar() {
           </a>
           <a
             href="/contact"
-            className={`block mt-4 mr-4 lg:inline-block lg:mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4 hover:border-[#6a125b] ${
+            className={`block mt-4 mr-4 inline-block mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4 hover:border-[#6a125b] ${
               router.pathname === '/contact' ? 'border-b-4 border-[#6a125b]' : ''
             }`}
           >
@@ -45,4 +45,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

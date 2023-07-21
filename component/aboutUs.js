@@ -32,7 +32,7 @@ const Desktop1 = (props) => {
           className={styles['rectangle4']}
         />
         <span className={styles['text']}>
-          <span>WHy Choose us?</span>
+          <span>Why Choose us?</span>
         </span>
         <span className={styles['text02']}>
           <span>

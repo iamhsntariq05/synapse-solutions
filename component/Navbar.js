@@ -20,7 +20,7 @@ function Navbar() {
       </div>
     
   
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div className="nav-links w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div className="text-sm lg:flex-grow lg:text-right">
           <a
             href="/"

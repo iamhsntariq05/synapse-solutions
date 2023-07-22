@@ -4,8 +4,11 @@ import { useState } from 'react';
 
 import AboutUs from '../component/aboutUs';
 import Desktop1 from '../component/aboutTest';
+import Desktop2 from '../component/Desktop2';
 
 import Card from '../component/Card';
+
+import ServiceExtension from '../component/ServiceExtension';
 
 import ParticleEffect from '../component/ParticleEffect';
 
@@ -101,13 +104,14 @@ export default function Example() {
   return (
     <div className="main">
       <Head>
-        <title>SYNAPSE SOLUTIONS CO</title>
+        <title>Synapse Solutions Co</title>
       </Head>
 
    <div >
    
       <Navbar />
       </div>
+
     
      
       <div className="wave-layer" >
@@ -128,21 +132,17 @@ export default function Example() {
 </div>
 
 
-    <AboutUs />
+    <Desktop2 />
 
       <div className="relative">
 
       
       <div className="wave-layers2">
         <div className="middle">
-          <div className="text-6xl font-normal font-helvetica leading-normal mt-0 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#ff00cc] to-[#333399]">coming soon | <Countdown date={'2023-07-23T00:00:00'} /></div>
+          <div className="text-2xl md:text-6xl font-normal font-helvetica leading-normal mt-0 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#ff00cc] to-[#333399]">coming soon | <Countdown date={'2023-07-28T00:00:00'} /></div>
         </div>
 
-        <div className="relative">
-  <div className="absolute bottom-0 right-0 transform rotate-x-180 translate-y-1/2 -translate-x-1/2 -rotate-45">
-    <GiGearHammer className="text-white text-[10rem] text-opacity-50 hover:text-opacity-100 hover:scale-110 hover:text-[#410B59]" />
-  </div>
-</div>
+       
 
 
       </div>
@@ -178,7 +178,7 @@ export default function Example() {
       </div>
       
 
-      <div className="services container ml-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+      <div className="services container ml-7 md:ml-[3rem] grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       <Card
         service="Software Development"
         text="Our talented team of developers brings ideas to life, crafting tailor-made software solutions that drive efficiency, productivity, and growth. From conceptualization to deployment, we're here to transform your vision into reality."
@@ -224,6 +224,8 @@ export default function Example() {
 </section>
 
       </div>
+
+      
 
       
 

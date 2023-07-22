@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import Contact from "./Contact";
 import IconBulb from "./IconBulb";
 
@@ -17,44 +17,46 @@ function BigContact() {
   const [additionalText, setAdditionalText] = useState("");
   const [type, setType] = useState("");
   const [currentStep, setCurrentStep] = useState(0);
+  const [inMainPage, setInMainPage] = useState(true);
 
   const handleButtonClick = (buttonName) => {
-    setSelectedButton(buttonName);
-    console.log(buttonName);
-  
-    if (buttonName !== "Email") {
+    if (inMainPage) {
+      setSelectedButton(buttonName);
       setType(buttonName);
+      setCurrentStep(1); // Move to the Name field page
+      setInMainPage(false); // Set inMainPage to false when moving to the Name field page
+    } else {
+      setCurrentStep(0); // Go back to the main page
+      setInMainPage(true); // Set inMainPage to true when going back to the main page
     }
   };
-  // const handleGoBack = () => {
-  //   setSelectedButton(null);
-  //   setName("");
-  //   setEmail("");
-  //   setAdditionalText("");
-  //   setShowSuccess(false);
-  // };
 
   const handleGoBack = () => {
-
     setCurrentStep((prevStep) => prevStep - 1);
+    console.log(currentStep);
+    if (currentStep === 1) {
+      //setSelectedButton(null); // Reset selectedButton to null when going back from the Email field page
+      setInMainPage(true); // Update inMainPage based on the currentStep
+    }
+    
   };
 
   const handleSubmitName = (value) => {
     setName(value);
-    
-    //setSelectedButton("Email");
-    setCurrentStep(1); // Move to the next step (Email input)
+    setCurrentStep((prevStep) => prevStep + 1);
+    //setCurrentStep(1); // Move to the next step (Email input)
   };
 
   const handleSubmitEmail = (value) => {
     setEmail(value);
-    //setSelectedButton("AdditionalText");
-    setCurrentStep(2); // Move to the next step (Email input)
+    setCurrentStep((prevStep) => prevStep + 1);
+    //setCurrentStep(2); // Move to the next step (Email input)
   
   };
 
   const handleSubmitAdditionalText = (value) => {
     setAdditionalText(value);
+    setCurrentStep(3);
 
     const formData = {
       name,
@@ -66,13 +68,17 @@ function BigContact() {
     try {
       sendEmail(formData);
       setShowSuccess(true);
-      // setSelectedButton(null);
-      setCurrentStep(0); 
+      setCurrentStep(0); // Move back to the main page after successful form submission
+      // setSelectedButton(null); // Reset selectedButton after successful form submission
+      setInMainPage(true);
+
     } catch (error) {
       console.error("An error occurred:", error);
       alert("An error occurred. Please try again later.");
     }
   };
+
+  
 
   const sendEmail = async (formData) => {
     const emailBody = `Name: ${formData.name}\nEmail: ${formData.email}\nType: ${formData.type}\nAdditional Text: ${formData.additionalText}`;
@@ -114,7 +120,7 @@ function BigContact() {
               
                How can we help you today?
             </h1>
-            {selectedButton === null && currentStep ===0 ? (
+            {inMainPage  ?  (
               <div className="flex items-center grid gap-6 grid-cols-2 mt-8 ml-4 sm:grid-cols-2 
               sm:gap-x-6 sm:gap-y-6
               sm:ml-2
@@ -145,7 +151,7 @@ function BigContact() {
               </div>
             ) : (
               <div className="text-lg ml-10 mt-3 ">
-               {currentStep === 0 && (
+               {currentStep === 1 && (
                
                   <Contact
                     prompt="Who do we have a pleasure talking with?"
@@ -155,7 +161,7 @@ function BigContact() {
                     onBack={handleGoBack}
                   />
                 )}
-                {currentStep === 1 && (
+                {currentStep === 2 && (
               
                   <Contact
                     prompt="How shall we contact you?"
@@ -165,7 +171,7 @@ function BigContact() {
                     required
                   />
                 )}
-                {currentStep === 2 && (
+                {currentStep === 3 && (
            
                   <Contact
                     prompt="Please provide additional details"

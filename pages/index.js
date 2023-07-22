@@ -118,10 +118,9 @@ export default function Example() {
 
       <ParticleEffect id="tsparticles"/>
 
-  <div className="typewriter-holder overflow-hidden">
-    <div className="professions mt-10">
-      <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 
-      via-red-200 to-yellow-100 ">
+  <div className="typewriter-holder">
+    <div className="professions  mt-6 ml-[60px] text-small md:font-custom md:text-large md:ml-[320px] md:mt-20 md-:justify-center ">
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">
         We offer
       </span>{" "}
       <span className="text-fuchsia-500 ">

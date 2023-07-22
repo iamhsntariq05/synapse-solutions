@@ -20,8 +20,8 @@ function Navbar() {
       </div>
     
   
-      <div className="nav-links w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="text-sm lg:flex-grow lg:text-right">
+      <div className="w-full block flex-grow flex items-center w-auto">
+        <div className="text-sm flex-grow text-right">
           <a
             href="/"
             className={`block mt-4 mr-10 lg:inline-block lg:mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4  hover:border-[#6a125b] ${

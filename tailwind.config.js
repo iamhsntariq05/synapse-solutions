@@ -5,7 +5,17 @@ module.exports = {
     "./component/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ["League Spartan", "sans-serif"],
+      },
+      fontSize: {
+        large: "80px", // Adjust the size as per your requirement
+        small : "30px"
+      },
+
+    },
   },
   plugins: [],
 }
+

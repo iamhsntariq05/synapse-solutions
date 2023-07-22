@@ -47,9 +47,9 @@ function Tech() {
   return (
     <>
     
-    <div className="flex flex-wrap grid grid-cols-4 gap-4 mt-5
-    grid-cols-4 mt-[50px] space-x-2
-    md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-[55px]">
+    <div className="flex flex-wrap grid grid-cols-4 mt-5
+    grid-cols-4 mt-[50px] ml-3
+    md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-10">
       {icons.map((Icon, index) => (
         <IconBulb key={index} icon={Icon} />
           ))}
@@ -57,18 +57,16 @@ function Tech() {
 
 
       <div className="
-        flex flex-wrap grid grid-cols-4 gap-4 mt-5
-        grid-cols-4 mt-[50px] space-x-2
+        flex flex-wrap grid grid-cols-4 mt-5
+        grid-cols-4 mt-[2px] ml-3
       md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-10">
             {icons2.map((Icon, index) => (
               <IconBulb key={index} icon={Icon} />
             ))}  
-
-      
       </div> 
     <div className="
-     flex flex-wrap grid grid-cols-4 gap-4 
-     grid-cols-4 mt-[50px] space-x-2
+     flex flex-wrap grid grid-cols-4 mt-5
+     grid-cols-4 mt-[2px] ml-3
      md:flex md:items-center md:justify-center md:space-x-[2rem] md:mt-10">
       {icons3.map((Icon, index) => (
         <IconBulb key={index} icon={Icon} />
@@ -82,7 +80,9 @@ function Tech() {
     <div className="ml-5 mt-[3rem] flex justify-center">
         <button
           type="button"
-          className="hover:bg-transparent bg-[#550a4f] hover:text-blue-700 font-semibold text-white py-2 px-4 border hover:border-blue-500 border-transparent mr-[6rem] rounded-full transform transition-all duration-300"
+          className="bg-transparent hover:bg-[#550a4f] text-blue-700
+           font-semibold hover:text-white py-2 px-4 border
+            border-blue-500 hover:border-transparent mr-[1rem] rounded-full transform transition-all duration-300"
           onClick={handle_click}
           style={{ width: '200px' }}
         >

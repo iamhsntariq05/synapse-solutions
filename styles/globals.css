@@ -47,7 +47,6 @@ a {
   font-weight: bold;
   font-size: 95px;
   margin-left: 15%;
-  z-index: 10;
 }
 
  @media (max-width: 576px) {
@@ -83,6 +82,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow-y: hidden;
 
 
 
@@ -278,6 +278,8 @@ a {
   height: 300px;
   width: 100%;
   }
+
+
 
 .nav-links {
 

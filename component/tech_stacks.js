@@ -77,18 +77,17 @@ function Tech() {
     
 
 
-    <div className="ml-5 mt-[3rem] flex justify-center">
-        <button
-          type="button"
-          className="bg-transparent hover:bg-[#550a4f] text-blue-700
-           font-semibold hover:text-white py-2 px-4 border
-            border-blue-500 hover:border-transparent mr-[1rem] rounded-full transform transition-all duration-300"
-          onClick={handle_click}
-          style={{ width: '200px' }}
-        >
-            Get In Touch
-          </button>
-
+    <div className="ml-5 mt-[1rem] md:mt-[2rem] flex justify-center">
+    <button
+  type="button"
+  className="bg-[#550a4f] hover:bg-transparent text-white hover:text-blue-700
+    font-semibold py-2 px-4 border border-[#550a4f] hover:border-transparent mr-[1rem] hover:border-blue-500
+    rounded-full transform transition-all duration-300"
+  onClick={handle_click}
+  style={{ width: '200px' }}
+>
+  Get In Touch
+</button>
       </div>
     </>
   );

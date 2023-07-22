@@ -23,8 +23,8 @@ const IconBulb = ({icon, text, onClick}) => {
   >
     {React.createElement(icon, { className: 'w-10 h-10' })}
   </div>
-  <div className="text-center text-[1rem] mt-2 mr-5 lg:mr-0">
-    <span className="text-white font-bold -ml-2 lg:ml-0"  >{text}</span>
+  <div className="text-center text-[1rem] mt-2 mr-5 md:mr-0">
+    <span className="text-white font-bold -ml-3 md:ml-0"  >{text}</span>
   </div>
 </div>
   );

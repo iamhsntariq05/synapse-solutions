@@ -109,23 +109,30 @@ function BigContact() {
         {showSuccess ? (
           <>
             <SuccessAnimation />
-            <h1 className="text-2xl font-normal font-helvetica leading-normal mt-0 mb-2 bg-clip-text text-[#ad3b76] tracking-wider">
-              Our representative will contact you shortly.
-            </h1>
+            {/* For small screens: Break the heading into two lines */}
+      <h1 className="text-2xl font-normal font-helvetica leading-normal ml-4 mt-0 mb-2 bg-clip-text text-[#ad3b76] tracking-wider sm:hidden">
+        Our representative will <br /> contact you shortly.
+      </h1>
+      {/* For medium and larger screens: Do not break the heading */}
+      <h1 className="text-2xl font-normal font-helvetica leading-normal ml-4 mt-0 mb-2 bg-clip-text text-[#ad3b76] tracking-wider hidden sm:block">
+        Our representative will contact you shortly.
+      </h1>
+          
           </>
         ) : (
           <>
-            <h1 className="text-2xl font-normal font-helvetica leading-normal mt-0 mb-2 bg-clip-text text-[#ad3b76] lg:ml-10 sm:ml-15"
-            style={{color:'white'}}>
+           <h1 className="text-2xl font-normal font-helvetica leading-normal mt-0 mb-2
+           bg-clip-text text-[#ad3b76] mx-auto  text-center md:text-center"
+            style={{color:'white' , fontSize:'40px'}}>
               
                How can we help you today?
             </h1>
             {inMainPage  ?  (
-              <div className="flex items-center grid gap-6 grid-cols-2 mt-8 ml-4 sm:grid-cols-2 
-              sm:gap-x-6 sm:gap-y-6
-              sm:ml-2
+              <div className="flex items-center grid gap-6 grid-cols-2 mt-8 ml-4 grid-cols-2 
+              gap-x-6 gap-y-6
+              ml-8
               sm-grid-rows-2 
-              lg:flex lg:items-center lg:space-x-20 lg:mt-8
+      
               md:flex md:items-center md:space-x-20 md:mt-8
               ">
                 <IconBulb
@@ -150,15 +157,16 @@ function BigContact() {
                 />
               </div>
             ) : (
-              <div className="text-lg ml-10 mt-3 ">
+              <div className="text-lg mt-3">
                {currentStep === 1 && (
                
                   <Contact
-                    prompt="Who do we have a pleasure talking with?"
-                    placeholder="Enter your name/your company's name"
-                    
+                    prompt="Whats your name?"
+                    placeholder="Enter your name"
+                    promptStyle={{ marginLeft: '60px' }}
                     onNext={handleSubmitName}
                     onBack={handleGoBack}
+                    
                   />
                 )}
                 {currentStep === 2 && (
@@ -168,16 +176,18 @@ function BigContact() {
                     placeholder="Enter your email"
                     onNext={handleSubmitEmail}
                     onBack={handleGoBack}
-                    required
+                    promptStyle={{marginLeft: '30px'}}
+                    
                   />
                 )}
                 {currentStep === 3 && (
            
                   <Contact
-                    prompt="Please provide additional details"
+                    prompt="Any Additional Information?"
                     placeholder="Enter additional text"
                     onNext={handleSubmitAdditionalText}
                     onBack={handleGoBack}
+                    promptStyle={{marginLeft: '20px'}}
 
                   />
                 )}

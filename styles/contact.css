@@ -1,0 +1,16 @@
+
+/* Styles for small screens */
+@media (max-width: 767px) {
+    .prompt-sm {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+  
+  /* Styles for large screens */
+  @media (min-width: 768px) {
+    .prompt-lg {
+      font-size: 20px;
+      margin-left: 80px;
+    }
+  }

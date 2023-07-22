@@ -2,7 +2,8 @@
 import Typewriter from 'typewriter-effect';
 import { useState } from 'react';
 
-import Desktop1 from '../component/aboutUs';
+import AboutUs from '../component/aboutUs';
+import Desktop1 from '../component/aboutTest';
 
 import Card from '../component/Card';
 
@@ -125,8 +126,8 @@ export default function Example() {
   </div>
 </div>
 
-{/* <Desktop1/> */}
-    
+
+    <AboutUs />
 
       <div className="relative">
 
@@ -174,8 +175,9 @@ export default function Example() {
             </div>
          </div>
       </div>
+      
 
-      <div className="container grid grid-cols-3 gap-8">
+      <div className="services container ml-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       <Card
         service="Software Development"
         text="Our talented team of developers brings ideas to life, crafting tailor-made software solutions that drive efficiency, productivity, and growth. From conceptualization to deployment, we're here to transform your vision into reality."
@@ -213,8 +215,8 @@ export default function Example() {
 
 
 
-    </div>
 
+</div>
 
 
    </div>

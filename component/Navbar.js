@@ -9,10 +9,10 @@ function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-[#2C0647] p-6">
+    <nav className="flex items-center justify-between flex-wrap bg-[#201341] p-6">
       <div className="flex-shrink-0">
         <Image
-          src="/Synapse Solutions Logo.png"
+          src="/new logo.png"
           alt="Synapse Solutions"
           width="200"
           height="1"
@@ -24,7 +24,7 @@ function Navbar() {
         <div className="text-sm flex-grow text-right">
           <a
             href="/"
-            className={`block mt-4 mr-10 inline-block mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4  hover:border-[#6a125b] ${
+            className={`block mt-4 mr-10 lg:inline-block lg:mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4  hover:border-[#6a125b] ${
               router.pathname === '/' ? 'border-b-4 border-[#6a125b]' : ''
             }`}
           >
@@ -32,7 +32,7 @@ function Navbar() {
           </a>
           <a
             href="/contact"
-            className={`block mt-4 mr-4 inline-block mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4 hover:border-[#6a125b] ${
+            className={`block mt-4 mr-4 lg:inline-block lg:mt-0 text-lg font-semibold text-[#ffffff] hover:border-b-4 hover:border-[#6a125b] ${
               router.pathname === '/contact' ? 'border-b-4 border-[#6a125b]' : ''
             }`}
           >

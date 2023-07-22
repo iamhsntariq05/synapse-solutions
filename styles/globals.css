@@ -30,10 +30,34 @@ a {
   }
 }
 
- /* .typewriter-holder {
-  font-family: 'Poppins';
+.typewriter-holder {
+  left: 300px;
+  height: auto;
+  /* position: absolute; */
+  display: block;
+  margin: auto;
+  /* overflow: hidden; */
+}
+
+.professions {
+  /* position: absolute; */
+  left: 0;
+  font-weight: bold;
+  font-size: 95px;
+  margin-left: 15%;
+}
+
+ @media (max-width: 576px) {
+
+  .typewriter-holder{
+    overflow: hidden;
+  }
+  .professions {
+  font-size: 25px;
+   float: left; 
+   margin-left: 35px;
   
-}  */
+}  
 
  .professions {
  font-family: 'Poppins';
@@ -67,7 +91,7 @@ a {
 
   overflow-x: hidden;
 
-  background-image: url('/wave.svg');
+  background-image: url('/test4.png');
 
 
 
@@ -251,6 +275,7 @@ a {
   right: 0;
   height: 450px;
   width: 100%;
+  z-index: 1;
   }
 
   
@@ -262,9 +287,4 @@ a {
   width: 100%;
   }
 
-  /* .icon-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
-  } */
-  
+}

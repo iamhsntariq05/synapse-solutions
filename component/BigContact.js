@@ -96,7 +96,6 @@ function BigContact() {
           text: emailBody,
         }),
       });
-
       setShowSuccess(true);
       setSelectedButton(null);
     }  catch (error) {

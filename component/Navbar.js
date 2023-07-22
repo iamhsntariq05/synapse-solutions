@@ -73,7 +73,7 @@ const Navbar = () => {
           
           <a
             href="/"
-            className={`block mt-4 text-lg font-semibold text-[#ffffff] hover:border-b-4 border-[#000000]-[60px] ${
+            className={`block mt-4 text-lg font-semibold text-[#ffffff] hover:border-b-4 border-[#000000] w-[60px] ${
               router.pathname === '/' ? 'border-b-4 border-[#000000] w-[60px]' : ''
             }`}
           >

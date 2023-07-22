@@ -30,50 +30,7 @@ a {
   }
 }
 
-.typewriter-holder {
-  left: 300px;
-  height: auto;
-  /* position: absolute; */
-  display: block;
-  margin: auto;
-  /* overflow: hidden; */
-}
 
-.professions {
-  /* position: absolute; */
-  left: 0;
-  font-weight: bold;
-  font-size: 95px;
-  margin-left: 15%;
-}
-
- @media (max-width: 576px) {
-
-  .typewriter-holder{
-    overflow: hidden;
-  }
-  .professions {
-  font-size: 25px;
-   float: left; 
-   margin-left: 35px;
-  
-}  
-
- .professions {
- font-family: 'Poppins';
-} 
-
-
-/* 
-@media (min-width: 576px) and (max-width: 992px){
-  .professions {
-  font-size: 40px;
-  position: absolute; 
-  margin-top: 20px;
-  left: -20%;
-  }
-  
-}   */
 
 
 .wave-layer {
@@ -287,4 +244,3 @@ a {
   width: 100%;
   }
 
-}

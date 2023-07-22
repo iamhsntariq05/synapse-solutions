@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ["CustomFont", "sans-serif"],
+        custom: ["League Spartan", "sans-serif"],
       },
       fontSize: {
         large: "80px", // Adjust the size as per your requirement

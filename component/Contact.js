@@ -36,10 +36,10 @@ const Contact = ({ prompt, placeholder, onNext, onBack }) => {
         >
           <input
             type="text"
-            style={{ fontSize: '13px' }}
+            style={{ fontSize: '13px'  }}
             placeholder={placeholder}
             className="appearance-none bg-transparent border-none w-full 
-            text-gray-700 mr-3 py-1 px-7 leading-tight focus:outline-none"
+            text-white mr-3 py-1 px-7 leading-tight focus:outline-none"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             required={true}

@@ -164,7 +164,7 @@ export default function Example() {
       <h2 class="font-bold text-3xl sm:text-4xl md:text-[40px] md:ml-[200px] text-white mb-4">
         What We Offer
       </h2>
-      <p class="md:text-xl text-xl md:h-12 md:leading-tight text-body-color text-white mt-6 md:flex md:flex-wrap md:ml-[200px] ">
+      <p class="md:flex md:text-2xl md:ml-[200px] text-xl text-body-color text-white mt-6 ">
         We strive to deliver innovative solutions that drive growth, optimize processes, and enhance customer experiences.
       </p>
     </div>

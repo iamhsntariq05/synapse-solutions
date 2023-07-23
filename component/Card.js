@@ -13,7 +13,7 @@ function Card({ service, text, img }) {
 
   return (
     <div
-      className={`max-w-xs sm:max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-3 md:ml-16  ${
+      className={`max-w-xs ml-1 sm:max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-3 md:ml-16  ${
         isHovered ? "bg-opacity-50 " : ""
       }`}
       onMouseEnter={handleMouseEnter}

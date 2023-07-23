@@ -19,7 +19,7 @@ return (
  </div>
 
     <div className="contact-container">
-    <ParticleEffect id="tsparticles2"/>
+    {/* <ParticleEffect id="tsparticles2"/> */}
     <div className="contact-waves">
     
     <div class="contact-waves flex flex-col items-center justify-center h-screen">

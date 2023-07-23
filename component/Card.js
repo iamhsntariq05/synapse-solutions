@@ -13,8 +13,8 @@ function Card({ service, text, img }) {
 
   return (
     <div
-      className={`max-w-xs sm:max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-3 ${
-        isHovered ? "bg-opacity-50" : ""
+      className={`max-w-xs sm:max-w-sm rounded-lg shadow bg-gray-800 border-gray-700 p-3 md:ml-16  ${
+        isHovered ? "bg-opacity-50 " : ""
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -25,7 +25,7 @@ function Card({ service, text, img }) {
         alt=""
       />
 
-      <div className="p-3">
+      <div className="p-3 ">
         <h5 className="mb-2 text-lg sm:text-xl font-bold tracking-tight text-white">
           {service}
         </h5>

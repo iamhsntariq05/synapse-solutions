@@ -138,7 +138,11 @@ export default function Example() {
       
       <div className="wave-layers2">
         <div className="middle">
-          <div className="text-2xl md:text-6xl font-normal font-helvetica leading-normal mt-0 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#ff00cc] to-[#333399]">coming soon | <Countdown date={'2023-07-28T00:00:00'} /></div>
+          <div className="text-2xl font-normal font-helvetica leading-normal
+         
+         md:h-[70px] md:ml-10 md:text-6xl 
+          -ml-0 -mt-2 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-[#ff00cc] to-[#333399]">
+            Coming Soon | <Countdown date={'2023-07-28T00:00:00'} /></div>
         </div>
 
        
@@ -151,30 +155,22 @@ export default function Example() {
       <div className="wave-layers4">
       <section class="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]">
    <div class="container">
-      <div class="flex flex-wrap -mx-4">
-         <div class="w-full px-4">
-            <div class="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
-               <span class="font-semibold text-lg text-primary mb-2 block text-white">
-               Our Services
-               </span>
-               <h2
-                  class="
-                  font-bold
-                  text-3xl
-                  sm:text-4xl
-                  md:text-[40px]
-                  text-white
-                  mb-4
-                  "
-                  >
-                  What We Offer
-               </h2>
-               <p class="text-base text-body-color text-white mt-6" >
-              We strive to deliver innovative solutions that drive growth, optimize processes, and enhance customer experiences.
-               </p>
-            </div>
-         </div>
-      </div>
+   <div class="flex flex-wrap -mx-4">
+  <div class="w-full px-4">
+    <div class="text-center mx-auto mb-12 lg:mb-20 max-w-[510px]">
+      <span class="font-semibold text-2xl text-primary mb-2 block text-white md:ml-[200px]">
+        Our Services
+      </span>
+      <h2 class="font-bold text-3xl sm:text-4xl md:text-[40px] md:ml-[200px] text-white mb-4">
+        What We Offer
+      </h2>
+      <p class="md:text-xl text-xl md:h-12 md:leading-tight text-body-color text-white mt-6 md:flex md:flex-wrap md:ml-[200px] ">
+        We strive to deliver innovative solutions that drive growth, optimize processes, and enhance customer experiences.
+      </p>
+    </div>
+  </div>
+</div>
+
       
 
       <div className="services container ml-7 md:ml-[3rem] grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">

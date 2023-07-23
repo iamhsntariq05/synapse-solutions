@@ -7,17 +7,19 @@ import Link from "@bradgarropy/next-link"
 const Navbar = () => {
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
-  useEffect(() => {
-    if (showMenu) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-  }, [showMenu]);
+
 
   const toggleMenu = () => {
     setShowMenu((prevShowMenu) => !prevShowMenu);
   };
+
+  useEffect(() => {
+    if (showMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [showMenu]);
 
   return (
     <nav className="flex items-center justify-between w-full bg-[#201341] p-6">
@@ -52,7 +54,7 @@ const Navbar = () => {
 
       {/* Menu for small screens */}
       {showMenu && (
-        <div className="fixed top-0 left-0  w-full h-full bg-fuchsia-900 p-6 z-50">
+        <div className="fixed top-0 left-0  w-full h-full bg-[#201341] p-6 z-50">
        
           <svg
             onClick={toggleMenu}
@@ -66,23 +68,23 @@ const Navbar = () => {
           >
             <path
               d="M6 6l10 10M16 6L6 16"
-              stroke="white"
+              stroke="#6a125b"
               strokeLinecap="round"
             ></path>
           </svg>
           
           <a
             href="/"
-            className={`block mt-4 text-lg font-semibold text-[#ffffff] hover:border-b-4 border-[#000000] w-[60px] ${
-              router.pathname === '/' ? 'border-b-4 border-[#000000] w-[60px]' : ''
+            className={`block mt-4 text-lg font-semibold text-[#ffffff] border-[#6a125b] hover:border-b-4 w-[60px] ${
+              router.pathname === '/' ? 'border-b-4 [#6a125b] w-[60px]' : ''
             }`}
           >
             Home
           </a>
           <a
           href="/contact"
-              className={`block mt-4  text-lg font-semibold text-[#ffffff]  hover:border-b-4  border-[#000000] w-[90px] ${
-                router.pathname === '/contact' ? 'border-b-4 border-[#000000] w-[90px]' : ''
+              className={`block mt-4  text-lg font-semibold text-[#ffffff] border-[#6a125b] hover:border-b-4  w-[90px] ${
+                router.pathname === '/contact' ? 'border-b-4 border-[#6a125b] w-[90px]' : ''
               }`}
             >
               Contact Us
@@ -94,7 +96,7 @@ const Navbar = () => {
       <div className="hidden md:flex gap-6">
         <a
           href="/"
-          className={`block mt-4 text-lg font-semibold text-[#ffffff] hover:border-b-4 ${
+          className={`block mt-4 text-lg font-semibold text-[#ffffff] border-[#6a125b] hover:border-b-4 ${
             router.pathname === '/' ? 'border-b-4 border-[#6a125b]' : ''
           }`}
         >
@@ -102,7 +104,7 @@ const Navbar = () => {
         </a>
         <a
           href="/contact"
-          className={`block mt-4 text-lg font-semibold text-[#ffffff] hover:border-b-4 ${
+          className={`block mt-4 text-lg font-semibold text-[#ffffff]  border-[#6a125b] hover:border-b-4 ${
             router.pathname === '/contact' ? 'border-b-4 border-[#6a125b]' : ''
           }`}
         >

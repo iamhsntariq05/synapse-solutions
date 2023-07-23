@@ -15,7 +15,7 @@ const LottieAnimation = () => {
   }
 
   return (
-    <div style={{ pointerEvents: 'none' }}>
+    <div>
       <Lottie
         options={defaultOptions}
         height={200}
